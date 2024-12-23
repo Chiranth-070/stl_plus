@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./includes/my_tree.h"
-#include "./includes/my_vector.h"
+#include "./includes/my_stl.h"
+
 using namespace std;
 
 // to compile g++ -o main.exe main.cpp src/*.cpp
