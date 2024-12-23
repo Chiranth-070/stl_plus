@@ -15,6 +15,25 @@ public:
     ~Node();
 };
 
+class BST
+{
+private:
+    Node *insert(Node *node, int data);
+    Node *search(Node *node, int data);
+    Node *deleteNode(Node *node, int data);
+
+public:
+    Node *root;
+    int minValue;
+    Node *minValueNode;
+    BST();
+    ~BST();
+
+    void insert(int data);
+    bool search(int data);
+    void deleteNode(int data);
+};
+
 Node *attach_left(Node *node, int data);
 Node *attach_right(Node *node, int data);
 void inorder(Node *node, std::vector<int> &ans);

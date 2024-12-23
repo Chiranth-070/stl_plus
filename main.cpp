@@ -6,12 +6,18 @@ using namespace std;
 // to compile g++ -o main.exe main.cpp src/*.cpp
 int main()
 {
-    Node *root = new Node(1);
-    attach_left(root, 2);
-    attach_right(root, 3);
+    BST bst;
 
-    vector<int> ans;
-    inorder(root, ans);
+    bst.insert(10);
+    bst.insert(5);
+    bst.insert(20);
+    bst.insert(8);
+    bst.insert(15);
 
-    print_vector(ans);
+    vector<int> result;
+    inorder(bst.root, result);
+    print_vector(result);
+
+    cout << endl;
+    cout << bst.minValue;
 }
