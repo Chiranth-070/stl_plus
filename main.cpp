@@ -8,16 +8,30 @@ int main()
 {
     BST bst;
 
-    bst.insert(10);
+    bst.insert(1);
     bst.insert(5);
-    bst.insert(20);
-    bst.insert(8);
+    bst.insert(10);
     bst.insert(15);
+    bst.insert(25);
 
-    vector<int> result;
-    inorder(bst.root, result);
-    print_vector(result);
+    vector<int> result1;
+    inorder(bst.root, result1);
+    print_vector(result1);
+    cout << endl;
 
+    AVL avl;
+    avl.insert(1);
+    avl.insert(5);
+    avl.insert(10);
+    avl.insert(15);
+    avl.insert(25);
+
+    vector<int> result2;
+    inorder(avl.root, result2);
+    print_vector(result2);
     cout << endl;
     cout << bst.minValue;
+    cout << endl;
+    cout << avl.minValue;
+    // same inorder but different levelorder you will get
 }
