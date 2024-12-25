@@ -48,6 +48,22 @@ void inorder(Node *node, std::vector<int> &ans)
     inorder(node->right, ans);
 }
 
+void levelorder(Node *node, std::vector<int> &result)
+{
+    std::queue<Node *> q;
+    q.push(node);
+    while (!q.empty())
+    {
+        Node *current = q.front();
+        q.pop();
+        result.push_back(current->data);
+        if (current->left)
+            q.push(current->left);
+        if (current->right)
+            q.push(current->right);
+    }
+}
+
 BST::BST()
 {
     root = nullptr;

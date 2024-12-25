@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <queue>
 
 class Node
 {
@@ -36,6 +37,7 @@ public:
 
 Node *attach_left(Node *node, int data);
 Node *attach_right(Node *node, int data);
-void inorder(Node *node, std::vector<int> &ans);
+void inorder(Node *node, std::vector<int> &result);
+void levelorder(Node *node, std::vector<int> &result);
 
 #endif

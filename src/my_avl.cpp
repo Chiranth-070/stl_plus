@@ -192,4 +192,20 @@ void inorder(AVLNode *node, std::vector<int> &result)
     }
 }
 
+void levelorder(AVLNode *node, std::vector<int> &result)
+{
+    std::queue<AVLNode *> q;
+    q.push(node);
+    while (!q.empty())
+    {
+        AVLNode *current = q.front();
+        q.pop();
+        result.push_back(current->data);
+        if (current->left)
+            q.push(current->left);
+        if (current->right)
+            q.push(current->right);
+    }
+}
+
 #endif

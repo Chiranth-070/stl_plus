@@ -15,7 +15,7 @@ int main()
     bst.insert(25);
 
     vector<int> result1;
-    inorder(bst.root, result1);
+    levelorder(bst.root, result1);
     print_vector(result1);
     cout << endl;
 
@@ -27,11 +27,14 @@ int main()
     avl.insert(25);
 
     vector<int> result2;
-    inorder(avl.root, result2);
+    levelorder(avl.root, result2);
     print_vector(result2);
     cout << endl;
     cout << bst.minValue;
     cout << endl;
     cout << avl.minValue;
+    cout << endl;
+    cout << avl.root->height;
+
     // same inorder but different levelorder you will get
 }
